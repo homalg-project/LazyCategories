@@ -512,7 +512,7 @@ InstallMethod( LazyCategory,
                 return IsIdenticalToIdentityMorphism( EvaluatedCell( morphism ) );
             fi;
             
-            return GenesisOfCellOperation( morphism ) = "IsIdenticalToIdentityMorphism";
+            return GenesisOfCellOperation( morphism ) = "IdentityMorphism";
             
         end );
         
@@ -525,7 +525,7 @@ InstallMethod( LazyCategory,
                     return IsIdenticalToZeroMorphism( EvaluatedCell( morphism ) );
                 fi;
                 
-                return GenesisOfCellOperation( morphism ) = "IsIdenticalToZeroMorphism";
+                return GenesisOfCellOperation( morphism ) = "ZeroMorphism";
                 
             end );
             
