@@ -1,0 +1,620 @@
+  
+  [1X1 [33X[0;0YLazy categories[133X[101X
+  
+  
+  [1X1.1 [33X[0;0YExamples[133X[101X
+  
+  
+  [1X1.1-1 [33X[0;0YDisassembling the snake in the Abelian category[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "LinearAlgebraForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "GeneralizedMorphismsForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSwitchGeneralizedMorphismStandard( "cospan" );[127X[104X
+    [4X[25Xgap>[125X [27XQ := HomalgFieldOfRationals( );[127X[104X
+    [4X[28XQ[128X[104X
+    [4X[25Xgap>[125X [27Xid := HomalgIdentityMatrix( 8, Q );[127X[104X
+    [4X[28X<An unevaluated 8 x 8 identity matrix over an internal ring>[128X[104X
+    [4X[25Xgap>[125X [27Xa := CertainColumns( CertainRows( id, [ 1, 2, 3 ] ), [ 2, 3, 4, 5 ] );[127X[104X
+    [4X[28X<An unevaluated non-zero 3 x 4 matrix over an internal ring>[128X[104X
+    [4X[25Xgap>[125X [27Xb := CertainColumns( CertainRows( id, [ 1, 2, 3, 4 ] ), [ 2, 3, 4, 5, 6 ] );[127X[104X
+    [4X[28X<An unevaluated non-zero 4 x 5 matrix over an internal ring>[128X[104X
+    [4X[25Xgap>[125X [27Xc := CertainColumns( CertainRows( id, [ 1, 2, 3, 4, 5 ] ), [ 3, 4, 5, 6, 7, 8 ] );[127X[104X
+    [4X[28X<An unevaluated non-zero 5 x 6 matrix over an internal ring>[128X[104X
+    [4X[25Xgap>[125X [27XIsZero( a * b );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsZero( b * c );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsZero( a * b * c );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XQmat := MatrixCategory( Q );[127X[104X
+    [4X[28XCategory of matrices over Q[128X[104X
+    [4X[25Xgap>[125X [27XLazy := LazyCategory( Qmat : show_evaluation := true );[127X[104X
+    [4X[28XLazyCategory( Category of matrices over Q )[128X[104X
+    [4X[25Xgap>[125X [27Xa := a / Lazy; SetLabel( a, "a" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := b / Lazy; SetLabel( b, "b" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := c / Lazy; SetLabel( c, "c" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xd := CokernelProjection( a );[127X[104X
+    [4X[28X<An epimorphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xe := CokernelColift( a, PreCompose( b, c ) );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xf := KernelEmbedding( e );[127X[104X
+    [4X[28X<A monomorphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xg := KernelEmbedding( c );[127X[104X
+    [4X[28X<A monomorphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xh := KernelLift( c, PreCompose( a, b ) );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xi := CokernelProjection( h );[127X[104X
+    [4X[28X<An epimorphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xff := AsGeneralizedMorphism( f );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xdd := AsGeneralizedMorphism( d );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xbb := AsGeneralizedMorphism( b );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xgg := AsGeneralizedMorphism( g );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xii := AsGeneralizedMorphism( i );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xss := PreCompose( [ ff, PseudoInverse( dd ), bb, PseudoInverse( gg ), ii ] );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xs := HonestRepresentative( ss );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xj := KernelObjectFunctorial( b, d, e );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xk := CokernelObjectFunctorial( h, g, b );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27XHK := HomologyObject( j, s );[127X[104X
+    [4X[28X<An object in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27XHC := HomologyObject( s, k );[127X[104X
+    [4X[28X<An object in LazyCategory( Category of matrices over Q )>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X1.1-2  [33X[0;0YDisassembling  the  snake in the Abelian category (only lift primitve[101X
+  [1Xoperations)[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "LinearAlgebraForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "GeneralizedMorphismsForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSwitchGeneralizedMorphismStandard( "cospan" );[127X[104X
+    [4X[25Xgap>[125X [27XQ := HomalgFieldOfRationals( );[127X[104X
+    [4X[28XQ[128X[104X
+    [4X[25Xgap>[125X [27Xid := HomalgIdentityMatrix( 8, Q );[127X[104X
+    [4X[28X<An unevaluated 8 x 8 identity matrix over an internal ring>[128X[104X
+    [4X[25Xgap>[125X [27Xa := CertainColumns( CertainRows( id, [ 1, 2, 3 ] ), [ 2, 3, 4, 5 ] );[127X[104X
+    [4X[28X<An unevaluated non-zero 3 x 4 matrix over an internal ring>[128X[104X
+    [4X[25Xgap>[125X [27Xb := CertainColumns( CertainRows( id, [ 1, 2, 3, 4 ] ), [ 2, 3, 4, 5, 6 ] );[127X[104X
+    [4X[28X<An unevaluated non-zero 4 x 5 matrix over an internal ring>[128X[104X
+    [4X[25Xgap>[125X [27Xc := CertainColumns( CertainRows( id, [ 1, 2, 3, 4, 5 ] ), [ 3, 4, 5, 6, 7, 8 ] );[127X[104X
+    [4X[28X<An unevaluated non-zero 5 x 6 matrix over an internal ring>[128X[104X
+    [4X[25Xgap>[125X [27XIsZero( a * b );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsZero( b * c );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsZero( a * b * c );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XQmat := MatrixCategory( Q );[127X[104X
+    [4X[28XCategory of matrices over Q[128X[104X
+    [4X[25Xgap>[125X [27XLazy := LazyCategory( Qmat :[127X[104X
+    [4X[25X>[125X [27X                show_evaluation := true, primitive_operations := true );[127X[104X
+    [4X[28XLazyCategory( Category of matrices over Q )[128X[104X
+    [4X[25Xgap>[125X [27Xa := a / Lazy; SetLabel( a, "a" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := b / Lazy; SetLabel( b, "b" ); SetLabel( Range( b ), "C" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := c / Lazy; SetLabel( c, "c" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xd := CokernelProjection( a );[127X[104X
+    [4X[28X<An epimorphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xe := CokernelColift( a, PreCompose( b, c ) );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xf := KernelEmbedding( e );[127X[104X
+    [4X[28X<A monomorphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xg := KernelEmbedding( c );[127X[104X
+    [4X[28X<A monomorphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xh := KernelLift( c, PreCompose( a, b ) );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xi := CokernelProjection( h );[127X[104X
+    [4X[28X<An epimorphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xff := AsGeneralizedMorphism( f );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xdd := AsGeneralizedMorphism( d );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xbb := AsGeneralizedMorphism( b );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xgg := AsGeneralizedMorphism( g );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xii := AsGeneralizedMorphism( i );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xss := PreCompose( [ ff, PseudoInverse( dd ), bb, PseudoInverse( gg ), ii ] );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of[128X[104X
+    [4X[28X LazyCategory( Category of matrices over Q ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xs := HonestRepresentative( ss );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xj := KernelObjectFunctorial( b, d, e );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27Xk := CokernelObjectFunctorial( h, g, b );[127X[104X
+    [4X[28X<A morphism in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27XHK := HomologyObject( j, s );[127X[104X
+    [4X[28X<An object in LazyCategory( Category of matrices over Q )>[128X[104X
+    [4X[25Xgap>[125X [27XHC := HomologyObject( s, k );[127X[104X
+    [4X[28X<An object in LazyCategory( Category of matrices over Q )>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X1.1-3 [33X[0;0YDisassembling the snake in the free Abelian category[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FreydCategoriesForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSwitchGeneralizedMorphismStandard( "cospan" );[127X[104X
+    [4X[25Xgap>[125X [27Xsnake_quiver := RightQuiver( "q(4)[a:1->2,b:2->3,c:3->4]" );[127X[104X
+    [4X[28Xq(4)[a:1->2,b:2->3,c:3->4][128X[104X
+    [4X[25Xgap>[125X [27XQ := HomalgFieldOfRationals( );[127X[104X
+    [4X[28XQ[128X[104X
+    [4X[25Xgap>[125X [27XA := PathAlgebra( Q, snake_quiver );[127X[104X
+    [4X[28XQ * q[128X[104X
+    [4X[25Xgap>[125X [27XA := A / [ A.abc ];[127X[104X
+    [4X[28X(Q * q) / [ 1*(a*b*c) ][128X[104X
+    [4X[25Xgap>[125X [27XQRowsA := QuiverRows( A );[127X[104X
+    [4X[28XQuiverRows( (Q * q) / [ 1*(a*b*c) ] )[128X[104X
+    [4X[25Xgap>[125X [27XAdelman := AdelmanCategory( QRowsA );[127X[104X
+    [4X[28XAdelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )[128X[104X
+    [4X[25Xgap>[125X [27XLazy := LazyCategory( Adelman : show_evaluation := true );[127X[104X
+    [4X[28XLazyCategory( Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )[128X[104X
+    [4X[25Xgap>[125X [27Xa := A.a / QRowsA / Adelman / Lazy; SetLabel( a, "a" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := A.b / QRowsA / Adelman / Lazy; SetLabel( b, "b" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := A.c / QRowsA / Adelman / Lazy; SetLabel( c, "c" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xd := CokernelProjection( a );[127X[104X
+    [4X[28X<An epimorphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xe := CokernelColift( a, PreCompose( b, c ) );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xf := KernelEmbedding( e );[127X[104X
+    [4X[28X<A monomorphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xg := KernelEmbedding( c );[127X[104X
+    [4X[28X<A monomorphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xh := KernelLift( c, PreCompose( a, b ) );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xi := CokernelProjection( h );[127X[104X
+    [4X[28X<An epimorphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xff := AsGeneralizedMorphism( f );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xdd := AsGeneralizedMorphism( d );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xbb := AsGeneralizedMorphism( b );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xgg := AsGeneralizedMorphism( g );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xii := AsGeneralizedMorphism( i );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xss := PreCompose( [ ff, PseudoInverse( dd ), bb, PseudoInverse( gg ), ii ] );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xs := HonestRepresentative( ss );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xj := KernelObjectFunctorial( b, d, e );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xk := CokernelObjectFunctorial( h, g, b );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHK := HomologyObject( j, s );[127X[104X
+    [4X[28X<An object in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHC := HomologyObject( s, k );[127X[104X
+    [4X[28X<An object in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X1.1-4  [33X[0;0YDisassembling  the  snake  in  the  free  Abelian category (only lift[101X
+  [1Xprimitve operations)[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FreydCategoriesForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSwitchGeneralizedMorphismStandard( "cospan" );[127X[104X
+    [4X[25Xgap>[125X [27Xsnake_quiver := RightQuiver( "q(4)[a:1->2,b:2->3,c:3->4]" );[127X[104X
+    [4X[28Xq(4)[a:1->2,b:2->3,c:3->4][128X[104X
+    [4X[25Xgap>[125X [27XQ := HomalgFieldOfRationals( );[127X[104X
+    [4X[28XQ[128X[104X
+    [4X[25Xgap>[125X [27XA := PathAlgebra( Q, snake_quiver );[127X[104X
+    [4X[28XQ * q[128X[104X
+    [4X[25Xgap>[125X [27XA := A / [ A.abc ];[127X[104X
+    [4X[28X(Q * q) / [ 1*(a*b*c) ][128X[104X
+    [4X[25Xgap>[125X [27XQRowsA := QuiverRows( A );[127X[104X
+    [4X[28XQuiverRows( (Q * q) / [ 1*(a*b*c) ] )[128X[104X
+    [4X[25Xgap>[125X [27XAdelman := AdelmanCategory( QRowsA );[127X[104X
+    [4X[28XAdelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )[128X[104X
+    [4X[25Xgap>[125X [27XLazy := LazyCategory( Adelman :[127X[104X
+    [4X[25X>[125X [27X                show_evaluation := true, primitive_operations := true );[127X[104X
+    [4X[28XLazyCategory( Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )[128X[104X
+    [4X[25Xgap>[125X [27Xa := A.a / QRowsA / Adelman / Lazy; SetLabel( a, "a" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := A.b / QRowsA / Adelman / Lazy; SetLabel( b, "b" ); SetLabel(Range( b ), "3");[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := A.c / QRowsA / Adelman / Lazy; SetLabel( c, "c" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xd := CokernelProjection( a );[127X[104X
+    [4X[28X<An epimorphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xe := CokernelColift( a, PreCompose( b, c ) );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xf := KernelEmbedding( e );[127X[104X
+    [4X[28X<A monomorphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xg := KernelEmbedding( c );[127X[104X
+    [4X[28X<A monomorphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xh := KernelLift( c, PreCompose( a, b ) );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xi := CokernelProjection( h );[127X[104X
+    [4X[28X<An epimorphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xff := AsGeneralizedMorphism( f );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xdd := AsGeneralizedMorphism( d );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xbb := AsGeneralizedMorphism( b );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xgg := AsGeneralizedMorphism( g );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xii := AsGeneralizedMorphism( i );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xss := PreCompose( [ ff, PseudoInverse( dd ), bb, PseudoInverse( gg ), ii ] );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xs := HonestRepresentative( ss );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xj := KernelObjectFunctorial( b, d, e );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xk := CokernelObjectFunctorial( h, g, b );[127X[104X
+    [4X[28X<A morphism in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHK := HomologyObject( j, s );[127X[104X
+    [4X[28X<An object in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHC := HomologyObject( s, k );[127X[104X
+    [4X[28X<An object in LazyCategory([128X[104X
+    [4X[28X Adelman category( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X1.1-5 [33X[0;0YDisassembling the snake in an underlying additive category[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FreydCategoriesForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSwitchGeneralizedMorphismStandard( "cospan" );[127X[104X
+    [4X[25Xgap>[125X [27Xsnake_quiver := RightQuiver( "q(4)[a:1->2,b:2->3,c:3->4]" );[127X[104X
+    [4X[28Xq(4)[a:1->2,b:2->3,c:3->4][128X[104X
+    [4X[25Xgap>[125X [27XQ := HomalgFieldOfRationals( );[127X[104X
+    [4X[28XQ[128X[104X
+    [4X[25Xgap>[125X [27XA := PathAlgebra( Q, snake_quiver );[127X[104X
+    [4X[28XQ * q[128X[104X
+    [4X[25Xgap>[125X [27XA := QuotientOfPathAlgebra( A, [ A.abc ] );[127X[104X
+    [4X[28X(Q * q) / [ 1*(a*b*c) ][128X[104X
+    [4X[25Xgap>[125X [27XQRowsA := QuiverRows( A );[127X[104X
+    [4X[28XQuiverRows( (Q * q) / [ 1*(a*b*c) ] )[128X[104X
+    [4X[25Xgap>[125X [27XLazy := LazyCategory( QRowsA : show_evaluation := true );[127X[104X
+    [4X[28XLazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )[128X[104X
+    [4X[25Xgap>[125X [27Xa := A.a / QRowsA / Lazy; SetLabel( a, "a" );[127X[104X
+    [4X[28X<An evaluated morphism in[128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := A.b / QRowsA / Lazy; SetLabel( b, "b" ); SetLabel( Range( b ), "3" );[127X[104X
+    [4X[28X<An evaluated morphism in[128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := A.c / QRowsA / Lazy; SetLabel( c, "c" );[127X[104X
+    [4X[28X<An evaluated morphism in[128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )>[128X[104X
+    [4X[25Xgap>[125X [27XAdelman := AdelmanCategory( Lazy );[127X[104X
+    [4X[28XAdelman category( LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )[128X[104X
+    [4X[25Xgap>[125X [27Xa := a / Adelman;[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := b / Adelman;[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := c / Adelman;[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xd := CokernelProjection( a );[127X[104X
+    [4X[28X<An epimorphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xe := CokernelColift( a, PreCompose( b, c ) );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xf := KernelEmbedding( e );[127X[104X
+    [4X[28X<A monomorphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xg := KernelEmbedding( c );[127X[104X
+    [4X[28X<A monomorphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xh := KernelLift( c, PreCompose( a, b ) );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xi := CokernelProjection( h );[127X[104X
+    [4X[28X<An epimorphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xff := AsGeneralizedMorphism( f );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xdd := AsGeneralizedMorphism( d );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xbb := AsGeneralizedMorphism( b );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xgg := AsGeneralizedMorphism( g );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xii := AsGeneralizedMorphism( i );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xss := PreCompose( [ ff, PseudoInverse( dd ), bb, PseudoInverse( gg ), ii ] );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xs := HonestRepresentative( ss );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xj := KernelObjectFunctorial( b, d, e );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xk := CokernelObjectFunctorial( h, g, b );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHK := HomologyObject( j, s );[127X[104X
+    [4X[28X<An object in Adelman category( LazyCategory([128X[104X
+    [4X[28X QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHC := HomologyObject( s, k );[127X[104X
+    [4X[28X<An object in Adelman category( LazyCategory([128X[104X
+    [4X[28X QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X1.1-6  [33X[0;0YDisassembling the snake in an underlying additive category (only lift[101X
+  [1Xprimitve operations)[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FreydCategoriesForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSwitchGeneralizedMorphismStandard( "cospan" );[127X[104X
+    [4X[25Xgap>[125X [27Xsnake_quiver := RightQuiver( "q(4)[a:1->2,b:2->3,c:3->4]" );[127X[104X
+    [4X[28Xq(4)[a:1->2,b:2->3,c:3->4][128X[104X
+    [4X[25Xgap>[125X [27XQ := HomalgFieldOfRationals( );[127X[104X
+    [4X[28XQ[128X[104X
+    [4X[25Xgap>[125X [27XA := PathAlgebra( Q, snake_quiver );[127X[104X
+    [4X[28XQ * q[128X[104X
+    [4X[25Xgap>[125X [27XA := QuotientOfPathAlgebra( A, [ A.abc ] );[127X[104X
+    [4X[28X(Q * q) / [ 1*(a*b*c) ][128X[104X
+    [4X[25Xgap>[125X [27XQRowsA := QuiverRows( A );[127X[104X
+    [4X[28XQuiverRows( (Q * q) / [ 1*(a*b*c) ] )[128X[104X
+    [4X[25Xgap>[125X [27XLazy := LazyCategory( QRowsA :[127X[104X
+    [4X[25X>[125X [27X                show_evaluation := true, primitive_operations := true );[127X[104X
+    [4X[28XLazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )[128X[104X
+    [4X[25Xgap>[125X [27Xa := A.a / QRowsA / Lazy; SetLabel( a, "a" );[127X[104X
+    [4X[28X<An evaluated morphism in[128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := A.b / QRowsA / Lazy; SetLabel( b, "b" ); SetLabel( Range( b ), "3" );[127X[104X
+    [4X[28X<An evaluated morphism in[128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := A.c / QRowsA / Lazy; SetLabel( c, "c" );[127X[104X
+    [4X[28X<An evaluated morphism in[128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) )>[128X[104X
+    [4X[25Xgap>[125X [27XAdelman := AdelmanCategory( Lazy );[127X[104X
+    [4X[28XAdelman category( LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )[128X[104X
+    [4X[25Xgap>[125X [27Xa := a / Adelman;[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := b / Adelman;[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := c / Adelman;[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xd := CokernelProjection( a );[127X[104X
+    [4X[28X<An epimorphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xe := CokernelColift( a, PreCompose( b, c ) );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xf := KernelEmbedding( e );[127X[104X
+    [4X[28X<A monomorphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xg := KernelEmbedding( c );[127X[104X
+    [4X[28X<A monomorphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xh := KernelLift( c, PreCompose( a, b ) );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xi := CokernelProjection( h );[127X[104X
+    [4X[28X<An epimorphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xff := AsGeneralizedMorphism( f );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xdd := AsGeneralizedMorphism( d );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xbb := AsGeneralizedMorphism( b );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xgg := AsGeneralizedMorphism( g );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xii := AsGeneralizedMorphism( i );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xss := PreCompose( [ ff, PseudoInverse( dd ), bb, PseudoInverse( gg ), ii ] );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xs := HonestRepresentative( ss );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xj := KernelObjectFunctorial( b, d, e );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xk := CokernelObjectFunctorial( h, g, b );[127X[104X
+    [4X[28X<A morphism in Adelman category([128X[104X
+    [4X[28X LazyCategory( QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHK := HomologyObject( j, s );[127X[104X
+    [4X[28X<An object in Adelman category( LazyCategory([128X[104X
+    [4X[28X QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHC := HomologyObject( s, k );[127X[104X
+    [4X[28X<An object in Adelman category( LazyCategory([128X[104X
+    [4X[28X QuiverRows( (Q * q) / [ 1*(a*b*c) ] ) ) )>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X1.1-7  [33X[0;0YDisassembling the snake in an underlying additive category (different[101X
+  [1Xmodel)[133X[101X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "Algebroids" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XLoadPackage( "FreydCategoriesForCAP" );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XSwitchGeneralizedMorphismStandard( "cospan" );[127X[104X
+    [4X[25Xgap>[125X [27Xsnake_quiver := RightQuiver( "q(4)[a:1->2,b:2->3,c:3->4]" );[127X[104X
+    [4X[28Xq(4)[a:1->2,b:2->3,c:3->4][128X[104X
+    [4X[25Xgap>[125X [27XQ := HomalgFieldOfRationals( );[127X[104X
+    [4X[28XQ[128X[104X
+    [4X[25Xgap>[125X [27XA := PathAlgebra( Q, snake_quiver );[127X[104X
+    [4X[28XQ * q[128X[104X
+    [4X[25Xgap>[125X [27XAoid := Algebroid( A, [ A.abc ] );[127X[104X
+    [4X[28XAlgebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4][128X[104X
+    [4X[25Xgap>[125X [27Xadd := AdditiveClosure( Aoid );[127X[104X
+    [4X[28XAdditive closure( Algebroid generated by[128X[104X
+    [4X[28Xthe right quiver q(4)[a:1->2,b:2->3,c:3->4] )[128X[104X
+    [4X[25Xgap>[125X [27XLazy := LazyCategory( add : show_evaluation := true );[127X[104X
+    [4X[28XLazyCategory( Additive closure( Algebroid generated by[128X[104X
+    [4X[28Xthe right quiver q(4)[a:1->2,b:2->3,c:3->4] ) )[128X[104X
+    [4X[25Xgap>[125X [27Xa := Aoid.a / add / Lazy; SetLabel( a, "a" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := Aoid.b / add / Lazy; SetLabel( b, "b" ); SetLabel( Range( b ), "3" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := Aoid.c / add / Lazy; SetLabel( c, "c" );[127X[104X
+    [4X[28X<An evaluated morphism in LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) )>[128X[104X
+    [4X[25Xgap>[125X [27XAdelman := AdelmanCategory( Lazy );[127X[104X
+    [4X[28XAdelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28XAlgebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )[128X[104X
+    [4X[25Xgap>[125X [27Xa := a / Adelman;[127X[104X
+    [4X[28X<A morphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xb := b / Adelman;[127X[104X
+    [4X[28X<A morphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xc := c / Adelman;[127X[104X
+    [4X[28X<A morphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xd := CokernelProjection( a );[127X[104X
+    [4X[28X<An epimorphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xe := CokernelColift( a, PreCompose( b, c ) );[127X[104X
+    [4X[28X<A morphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xf := KernelEmbedding( e );[127X[104X
+    [4X[28X<A monomorphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xg := KernelEmbedding( c );[127X[104X
+    [4X[28X<A monomorphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xh := KernelLift( c, PreCompose( a, b ) );[127X[104X
+    [4X[28X<A morphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xi := CokernelProjection( h );[127X[104X
+    [4X[28X<An epimorphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xff := AsGeneralizedMorphism( f );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28XLazyCategory( Additive closure( Algebroid generated by[128X[104X
+    [4X[28Xthe right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xdd := AsGeneralizedMorphism( d );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28XLazyCategory( Additive closure( Algebroid generated by[128X[104X
+    [4X[28Xthe right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xbb := AsGeneralizedMorphism( b );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28XLazyCategory( Additive closure( Algebroid generated by[128X[104X
+    [4X[28Xthe right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xgg := AsGeneralizedMorphism( g );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28XLazyCategory( Additive closure( Algebroid generated by[128X[104X
+    [4X[28Xthe right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xii := AsGeneralizedMorphism( i );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28XLazyCategory( Additive closure( Algebroid generated by[128X[104X
+    [4X[28Xthe right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xss := PreCompose( [ ff, PseudoInverse( dd ), bb, PseudoInverse( gg ), ii ] );[127X[104X
+    [4X[28X<A morphism in Generalized morphism category of Adelman category([128X[104X
+    [4X[28XLazyCategory( Additive closure( Algebroid generated by[128X[104X
+    [4X[28Xthe right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) ) by cospan>[128X[104X
+    [4X[25Xgap>[125X [27Xs := HonestRepresentative( ss );[127X[104X
+    [4X[28X<A morphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xj := KernelObjectFunctorial( b, d, e );[127X[104X
+    [4X[28X<A morphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27Xk := CokernelObjectFunctorial( h, g, b );[127X[104X
+    [4X[28X<A morphism in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHK := HomologyObject( j, s );[127X[104X
+    [4X[28X<An object in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+    [4X[25Xgap>[125X [27XHC := HomologyObject( s, k );[127X[104X
+    [4X[28X<An object in Adelman category( LazyCategory( Additive closure([128X[104X
+    [4X[28X Algebroid generated by the right quiver q(4)[a:1->2,b:2->3,c:3->4] ) ) )>[128X[104X
+  [4X[32X[104X
+  
