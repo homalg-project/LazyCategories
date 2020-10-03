@@ -6,10 +6,10 @@
          [1X Construct an equivalent lazy category out of a CAP category [101X
   
   
-                                   2020.09.06
+                                   2020.09.07
   
   
-                                6 September 2020
+                                7 September 2020
   
   
                                 Mohamed Barakat
@@ -18,9 +18,9 @@
   
   Mohamed Barakat
       Email:    [7Xmailto:mohamed.barakat@uni-siegen.de[107X
-      Homepage: [7Xhttps://algebra.mathematik.uni-siegen.de/barakat/[107X
+      Homepage: [7Xhttps://mohamed-barakat.github.io/[107X
       Address:  [33X[0;14YWalter-Flex-Str. 3[133X
-                [33X[0;14Y57072 Siegen[133X
+                [33X[0;14Y57068 Siegen[133X
                 [33X[0;14YGermany[133X
   
   
