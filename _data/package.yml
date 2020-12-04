@@ -1,7 +1,7 @@
 name: LazyCategories
-version: "2020.10-03"
+version: "2020.12-01"
 license: "GPL-2.0-or-later"
-date: 2020-10-22
+date: 2020-12-04
 description: |
     Construct an equivalent lazy category out of a CAP category
 
@@ -21,7 +21,7 @@ needed-pkgs:
       url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
     - name: "ToolsForHomalg"
       version: ">= 2020.09.06"
-      url: "https://homalg-project.github.io/homalg_project/ToolsForHomalg"
+      url: "https://homalg-project.github.io/pkg/ToolsForHomalg"
     - name: "CAP"
       version: ">= 2020.04.15"
       url: "https://homalg-project.github.io/CAP_project/CAP"
@@ -35,17 +35,17 @@ needed-pkgs:
       version: ">= 0.12.1"
       url: "https://gap-packages.github.io/Digraphs"
 
-www: https://homalg-project.github.io/LazyCategories
+www: https://homalg-project.github.io/pkg/LazyCategories
 readme: README.md
 packageinfo: https://homalg-project.github.io/LazyCategories/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/homalg-project/LazyCategories/releases/download/v2020.10-03/LazyCategories-2020.10-03.tar.gz
+      url: https://github.com/homalg-project/LazyCategories/releases/download/v2020.12-01/LazyCategories-2020.12-01.tar.gz
     - name: .zip
-      url: https://github.com/homalg-project/LazyCategories/releases/download/v2020.10-03/LazyCategories-2020.10-03.zip
+      url: https://github.com/homalg-project/LazyCategories/releases/download/v2020.12-01/LazyCategories-2020.12-01.zip
 
-pdf: https://github.com/homalg-project/LazyCategories/releases/download/v2020.10-03/LazyCategories-2020.10-03.pdf
+pdf: https://github.com/homalg-project/LazyCategories/releases/download/v2020.12-01/LazyCategories-2020.12-01.pdf
 
 abstract: |
 
@@ -56,24 +56,25 @@ citeas: |
     <p class='BibEntry'>
     [<span class='BibKey'>Bar20</span>]   <b class='BibAuthor'>Barakat, M.</b>,
      <i class='BibTitle'>LazyCategories, Construct an equivalent lazy category out of a CAP category,
-             Version 2020.10-03</i>
+             Version 2020.12-01</i>
      (<span class='BibYear'>2020</span>)<br />
     (<span class='BibNote'>GAP package</span>),
-    <span class='BibHowpublished'><a href="https://homalg-project.github.io/LazyCategories">https://homalg-project.github.io/LazyCategories</a></span>.
+    <span class='BibHowpublished'><a href="https://homalg-project.github.io/pkg/LazyCategories">https://homalg-project.github.io/pkg/LazyCategories</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ LazyCategories2020.10-03,
+    @misc{ LazyCategories2020.12-01,
       author =           {Barakat, M.},
       title =            {{LazyCategories},   Construct   an   equivalent   lazy
-                          category out of a CAP category, {V}ersion 2020.10-03},
-      month =            {Oct},
+                          category out of a CAP category, {V}ersion 2020.12-01},
+      month =            {Dec},
       year =             {2020},
       note =             {GAP package},
       howpublished =     {\href
-                          {https://homalg-project.github.io/LazyCategories}
+                          {https://homalg-project.github.io/pkg/LazyCategories}
                           {\texttt{https://homalg-project.github.io/}\discretionary
+                          {}{}{}\texttt{pkg/}\discretionary
                           {}{}{}\texttt{LazyCategories}}},
       printedkey =       {Bar20}
     }

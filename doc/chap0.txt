@@ -6,10 +6,10 @@
          [1X Construct an equivalent lazy category out of a CAP category [101X
   
   
-                                   2020.10-03
+                                   2020.12-01
   
   
-                                22 October 2020
+                                4 December 2020
   
   
                                 Mohamed Barakat
