@@ -6,10 +6,10 @@
          [1X Construct an equivalent lazy category out of a CAP category [101X
   
   
-                                   2021.11-01
+                                   2021.12-01
   
   
-                                29 November 2021
+                                27 December 2021
   
   
                                 Mohamed Barakat
@@ -63,8 +63,9 @@
       2.4-2 LazyCategory
     2.5 [33X[0;0YOperations[133X
       2.5-1 SetLabel
-      2.5-2 IsEqualForCells
-      2.5-3 Visualize
+      2.5-2 GetLabel
+      2.5-3 IsEqualForCells
+      2.5-4 Visualize
   
   
   [32X
