@@ -1,5 +1,5 @@
 name: LazyCategories
-version: "2022.01-01"
+version: "2022.01-02"
 license: "GPL-2.0-or-later"
 date: 2022-01-24
 description: |
@@ -41,11 +41,11 @@ packageinfo: https://homalg-project.github.io/LazyCategories/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/homalg-project/LazyCategories/releases/download/v2022.01-01/LazyCategories-2022.01-01.tar.gz
+      url: https://github.com/homalg-project/LazyCategories/releases/download/v2022.01-02/LazyCategories-2022.01-02.tar.gz
     - name: .zip
-      url: https://github.com/homalg-project/LazyCategories/releases/download/v2022.01-01/LazyCategories-2022.01-01.zip
+      url: https://github.com/homalg-project/LazyCategories/releases/download/v2022.01-02/LazyCategories-2022.01-02.zip
 
-pdf: https://github.com/homalg-project/LazyCategories/releases/download/v2022.01-01/LazyCategories-2022.01-01.pdf
+pdf: https://github.com/homalg-project/LazyCategories/releases/download/v2022.01-02/LazyCategories-2022.01-02.pdf
 
 abstract: |
 
@@ -56,7 +56,7 @@ citeas: |
     <p class='BibEntry'>
     [<span class='BibKey'>Bar22</span>]   <b class='BibAuthor'>Barakat, M.</b>,
      <i class='BibTitle'>LazyCategories, Construct an equivalent lazy category out of a CAP category,
-             Version 2022.01-01</i>
+             Version 2022.01-02</i>
      (<span class='BibYear'>2022</span>)<br />
     (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://homalg-project.github.io/pkg/LazyCategories">https://homalg-project.github.io/pkg/LazyCategories</a></span>.
@@ -64,10 +64,10 @@ citeas: |
     
 
 bibtex: |
-    @misc{ LazyCategories2022.01-01,
+    @misc{ LazyCategories2022.01-02,
       author =           {Barakat, M.},
       title =            {{LazyCategories},   Construct   an   equivalent   lazy
-                          category out of a CAP category, {V}ersion 2022.01-01},
+                          category out of a CAP category, {V}ersion 2022.01-02},
       month =            {Jan},
       year =             {2022},
       note =             {GAP package},
