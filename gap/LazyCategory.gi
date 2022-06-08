@@ -1253,13 +1253,13 @@ InstallOtherMethod( DotVertexLabelledDigraph,
     str := "//dot\n";
     
     Append( str, "digraph hgn{\n" );
-    Append( str, "node [shape=rect]\n" );
+    Append( str, "node [shape=rect, fontname=\"DejaVu Serif,serif\"]\n" );
 
     for i in DigraphVertices( D ) do
         Append( str, String(i) );
         Append( str, " [label=\"" );
         Append( str, String( DigraphVertexLabel( D, i ) ) );
-        Append( str, "\"]\n" );
+        Append( str, "\", fontname=\"DejaVu Serif,serif\"]\n" );
     od;
     
     list_of_children := D!.list_of_children;
@@ -1269,7 +1269,8 @@ InstallOtherMethod( DotVertexLabelledDigraph,
         l := Length( children );
         if l > 1 and Length( Set( children ) ) > 1 then
             for j in [ 1 .. l ] do
-                Append( str, Concatenation( String(children[j]), " -> ", String(i), " [ label=\"", String(j), "\" ]\n" ) );
+                Append( str,
+                        Concatenation( String(children[j]), " -> ", String(i), " [label=\"", String(j), "\", fontname=\"DejaVu Serif,serif\"]\n" ) );
             od;
         else
             for j in [ 1 .. l ] do
