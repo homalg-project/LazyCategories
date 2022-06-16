@@ -777,11 +777,11 @@ RightQuiver( "q(4)[a:1-&gt;2,b:2-&gt;3,c:3-&gt;4]" ) ) ) / relations ) ) )
 
 <div class="example"><pre>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T := TerminalCategoryWithMultipleObjects( );</span>
-TerminalCategoryWithMultipleObjects
+TerminalCategoryWithMultipleObjects( )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L := LazyCategory( T : primitive_operations := true, optimize := 0 );</span>
-LazyCategory( TerminalCategoryWithMultipleObjects )
+LazyCategory( TerminalCategoryWithMultipleObjects( ) )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := "a" / T / L;</span>
-&lt;An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects )&gt;
+&lt;An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( a );</span>
 a
 
@@ -789,7 +789,7 @@ An evaluated object given by the above data
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsWellDefined( a );</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">aa := ObjectConstructor( T, "a" ) / L;</span>
-&lt;An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects )&gt;
+&lt;An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( aa );</span>
 a
 
@@ -797,7 +797,7 @@ An evaluated object given by the above data
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a = aa;</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b := "b" / T / L;</span>
-&lt;An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects )&gt;
+&lt;An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( b );</span>
 b
 
@@ -805,20 +805,20 @@ An evaluated object given by the above data
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a = b;</span>
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t := TensorProduct( a, b );</span>
-&lt;An object in LazyCategory( TerminalCategoryWithMultipleObjects )&gt;
+&lt;An object in LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( t );</span>
 TensorProductOnObjects(
 &lt;An evaluated object in
- LazyCategory( TerminalCategoryWithMultipleObjects )&gt;,
+ LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;,
 &lt;An evaluated object in
- LazyCategory( TerminalCategoryWithMultipleObjects )&gt; )
+ LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt; )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a = t;</span>
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TensorProduct( a, a ) = t;</span>
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := MorphismConstructor( EvaluatedCell( a ), "m", EvaluatedCell( b ) ) / L;</span>
 &lt;An evaluated morphism in
- LazyCategory( TerminalCategoryWithMultipleObjects )&gt;
+ LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( m );</span>
 a
 |
@@ -831,7 +831,7 @@ An evaluated morphism given by the above data
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">n := MorphismConstructor( EvaluatedCell( a ), "n", EvaluatedCell( b ) ) / L;</span>
 &lt;An evaluated morphism in
- LazyCategory( TerminalCategoryWithMultipleObjects )&gt;
+ LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( n );</span>
 a
 |
@@ -848,22 +848,22 @@ true
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">id := IdentityMorphism( a );</span>
 &lt;An identity morphism in
- LazyCategory( TerminalCategoryWithMultipleObjects )&gt;
+ LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( id );</span>
 IdentityMorphism( &lt;An evaluated object in
-LazyCategory( TerminalCategoryWithMultipleObjects )&gt; )
+LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt; )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m = id;</span>
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">id = MorphismConstructor( EvaluatedCell( a ), "xy", EvaluatedCell( a ) ) / L;</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">z := ZeroMorphism( a, a );</span>
-&lt;A zero morphism in LazyCategory( TerminalCategoryWithMultipleObjects )&gt;
+&lt;A zero morphism in LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( z );</span>
 ZeroMorphism(
 &lt;An evaluated object in
- LazyCategory( TerminalCategoryWithMultipleObjects )&gt;,
+ LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt;,
 &lt;An evaluated object in
- LazyCategory( TerminalCategoryWithMultipleObjects )&gt; )
+ LazyCategory( TerminalCategoryWithMultipleObjects( ) )&gt; )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">id = z;</span>
 true
 </pre></div>

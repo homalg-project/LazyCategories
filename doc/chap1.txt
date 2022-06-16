@@ -716,11 +716,11 @@
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XT := TerminalCategoryWithMultipleObjects( );[127X[104X
-    [4X[28XTerminalCategoryWithMultipleObjects[128X[104X
+    [4X[28XTerminalCategoryWithMultipleObjects( )[128X[104X
     [4X[25Xgap>[125X [27XL := LazyCategory( T : primitive_operations := true, optimize := 0 );[127X[104X
-    [4X[28XLazyCategory( TerminalCategoryWithMultipleObjects )[128X[104X
+    [4X[28XLazyCategory( TerminalCategoryWithMultipleObjects( ) )[128X[104X
     [4X[25Xgap>[125X [27Xa := "a" / T / L;[127X[104X
-    [4X[28X<An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects )>[128X[104X
+    [4X[28X<An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects( ) )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( a );[127X[104X
     [4X[28Xa[128X[104X
     [4X[28X[128X[104X
@@ -728,7 +728,7 @@
     [4X[25Xgap>[125X [27XIsWellDefined( a );[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xaa := ObjectConstructor( T, "a" ) / L;[127X[104X
-    [4X[28X<An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects )>[128X[104X
+    [4X[28X<An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects( ) )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( aa );[127X[104X
     [4X[28Xa[128X[104X
     [4X[28X[128X[104X
@@ -736,7 +736,7 @@
     [4X[25Xgap>[125X [27Xa = aa;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xb := "b" / T / L;[127X[104X
-    [4X[28X<An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects )>[128X[104X
+    [4X[28X<An evaluated object in LazyCategory( TerminalCategoryWithMultipleObjects( ) )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( b );[127X[104X
     [4X[28Xb[128X[104X
     [4X[28X[128X[104X
@@ -744,20 +744,20 @@
     [4X[25Xgap>[125X [27Xa = b;[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Xt := TensorProduct( a, b );[127X[104X
-    [4X[28X<An object in LazyCategory( TerminalCategoryWithMultipleObjects )>[128X[104X
+    [4X[28X<An object in LazyCategory( TerminalCategoryWithMultipleObjects( ) )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( t );[127X[104X
     [4X[28XTensorProductOnObjects([128X[104X
     [4X[28X<An evaluated object in[128X[104X
-    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects )>,[128X[104X
+    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects( ) )>,[128X[104X
     [4X[28X<An evaluated object in[128X[104X
-    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects )> )[128X[104X
+    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects( ) )> )[128X[104X
     [4X[25Xgap>[125X [27Xa = t;[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27XTensorProduct( a, a ) = t;[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Xm := MorphismConstructor( EvaluatedCell( a ), "m", EvaluatedCell( b ) ) / L;[127X[104X
     [4X[28X<An evaluated morphism in[128X[104X
-    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects )>[128X[104X
+    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects( ) )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( m );[127X[104X
     [4X[28Xa[128X[104X
     [4X[28X|[128X[104X
@@ -770,7 +770,7 @@
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xn := MorphismConstructor( EvaluatedCell( a ), "n", EvaluatedCell( b ) ) / L;[127X[104X
     [4X[28X<An evaluated morphism in[128X[104X
-    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects )>[128X[104X
+    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects( ) )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( n );[127X[104X
     [4X[28Xa[128X[104X
     [4X[28X|[128X[104X
@@ -787,22 +787,22 @@
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xid := IdentityMorphism( a );[127X[104X
     [4X[28X<An identity morphism in[128X[104X
-    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects )>[128X[104X
+    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects( ) )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( id );[127X[104X
     [4X[28XIdentityMorphism( <An evaluated object in[128X[104X
-    [4X[28XLazyCategory( TerminalCategoryWithMultipleObjects )> )[128X[104X
+    [4X[28XLazyCategory( TerminalCategoryWithMultipleObjects( ) )> )[128X[104X
     [4X[25Xgap>[125X [27Xm = id;[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27Xid = MorphismConstructor( EvaluatedCell( a ), "xy", EvaluatedCell( a ) ) / L;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27Xz := ZeroMorphism( a, a );[127X[104X
-    [4X[28X<A zero morphism in LazyCategory( TerminalCategoryWithMultipleObjects )>[128X[104X
+    [4X[28X<A zero morphism in LazyCategory( TerminalCategoryWithMultipleObjects( ) )>[128X[104X
     [4X[25Xgap>[125X [27XDisplay( z );[127X[104X
     [4X[28XZeroMorphism([128X[104X
     [4X[28X<An evaluated object in[128X[104X
-    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects )>,[128X[104X
+    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects( ) )>,[128X[104X
     [4X[28X<An evaluated object in[128X[104X
-    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects )> )[128X[104X
+    [4X[28X LazyCategory( TerminalCategoryWithMultipleObjects( ) )> )[128X[104X
     [4X[25Xgap>[125X [27Xid = z;[127X[104X
     [4X[28Xtrue[128X[104X
   [4X[32X[104X
