@@ -6,10 +6,10 @@
          [1X Construct an equivalent lazy category out of a CAP category [101X
   
   
-                                   2022.09-01
+                                   2022.10-01
   
   
-                               21 September 2022
+                                27 October 2022
   
   
                                 Mohamed Barakat
@@ -41,9 +41,7 @@
       1.1-5 [33X[0;0YDisassembling the snake in an underlying additive category[133X
       1.1-6 [33X[0;0YDisassembling the snake in an underlying additive category (only
       lift primitve operations)[133X
-      1.1-7 [33X[0;0YDisassembling the snake in an underlying additive category
-      (different model)[133X
-      1.1-8 [33X[0;0YLazy terminal category with multiple objects[133X
+      1.1-7 [33X[0;0YLazy terminal category with multiple objects[133X
   2 [33X[0;0YCreate lazy hulls of a category[133X
     2.1 [33X[0;0YGAP categories[133X
       2.1-1 IsLazyCapCategory
