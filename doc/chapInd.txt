@@ -4,6 +4,7 @@
   
   [2X\/[102X, for IsCapCategoryCell, IsLazyCapCategory 2.4-1 
   [2XDigraphOfEvaluation[102X, for IsLazyCapCategoryCell 2.3-5 
+  [2XEmbeddingFunctorOfUnderlyingCategory[102X, for IsCapCategory 2.4-3 
   [2XEvaluatedCell[102X, for IsLazyCapCategoryCell 2.3-6 
   [2XGenesisOfCellArguments[102X, for IsLazyCapCategoryCell 2.3-3 
   [2XGenesisOfCellOperation[102X, for IsLazyCapCategoryCell 2.3-2 

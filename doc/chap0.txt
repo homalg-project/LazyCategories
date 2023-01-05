@@ -6,10 +6,10 @@
          [1X Construct an equivalent lazy category out of a CAP category [101X
   
   
-                                   2023.01-01
+                                   2023.01-02
   
   
-                                 4 January 2023
+                                 5 January 2023
   
   
                                 Mohamed Barakat
@@ -60,6 +60,7 @@
     2.4 [33X[0;0YConstructors[133X
       2.4-1 \/
       2.4-2 LazyCategory
+      2.4-3 EmbeddingFunctorOfUnderlyingCategory
     2.5 [33X[0;0YOperations[133X
       2.5-1 SetLabel
       2.5-2 GetLabel

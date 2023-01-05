@@ -77,6 +77,10 @@
   
   [33X[1;0Y[29X[2XLazyCategory[102X( [3Xarg[103X ) [32X operation[133X
   
+  [1X2.4-3 EmbeddingFunctorOfUnderlyingCategory[101X
+  
+  [33X[1;0Y[29X[2XEmbeddingFunctorOfUnderlyingCategory[102X( [3Xarg[103X ) [32X operation[133X
+  
   
   [1X2.5 [33X[0;0YOperations[133X[101X
   
